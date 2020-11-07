@@ -7,3 +7,6 @@ D:\Estudos\Programação\SistemasDeClientes\SistemasDeClientes\obj\Debug\Sistema
 D:\Estudos\Programação\SistemasDeClientes\SistemasDeClientes\obj\Debug\SistemasDeClientes.csproj.GenerateResource.cache
 D:\Estudos\Programação\SistemasDeClientes\SistemasDeClientes\obj\Debug\SistemasDeClientes.exe
 D:\Estudos\Programação\SistemasDeClientes\SistemasDeClientes\obj\Debug\SistemasDeClientes.pdb
+D:\Estudos\Programação\SistemasDeClientes\SistemasDeClientes\bin\Debug\MySql.Data.dll
+D:\Estudos\Programação\SistemasDeClientes\SistemasDeClientes\bin\Debug\MySql.Data.xml
+D:\Estudos\Programação\SistemasDeClientes\SistemasDeClientes\obj\Debug\SistemasDeClientes.csproj.CopyComplete
