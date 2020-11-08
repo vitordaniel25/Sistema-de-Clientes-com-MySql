@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace SistemasDeClientes
 {
-    class ConexãoSql
+    class Casdastrar
     {
         MySqlConnection conexao;
         MySqlCommand comando;
@@ -16,9 +16,10 @@ namespace SistemasDeClientes
         MySqlDataReader dataReader;
         string strSQL;
     
-        public void SalvarNoBanco(string nome,string email, string telefone, string data, string cpf, string rua, 
+        public bool SalvarNoBanco(string nome,string email, string telefone, string data, string cpf, string rua, 
             string bairro, string cidade, string numero, string cep, string uf)
         {
+            bool limpar = false;
             
             try
             {
@@ -34,14 +35,15 @@ namespace SistemasDeClientes
                 comando.Parameters.AddWithValue("@CPF", cpf);
                 comando.Parameters.AddWithValue("@CEP", cep);
                 comando.Parameters.AddWithValue("@RUA", rua);
-                comando.Parameters.AddWithValue("@NUMERO", numero);
+                comando.Parameters.AddWithValue("@NUMERO", numero); 
                 comando.Parameters.AddWithValue("@UF", uf);
                 comando.Parameters.AddWithValue("@CIDADE", cidade);
                 comando.Parameters.AddWithValue("@BAIRRO", bairro);
 
                 conexao.Open();
-
                 comando.ExecuteNonQuery();
+                MessageBox.Show("Cadastrado com sucesso!");
+                limpar = true;
             }
             catch (Exception ex)
             {
@@ -53,6 +55,7 @@ namespace SistemasDeClientes
                 conexao = null;
                 comando = null;
             }
+            return limpar;
         }
 
     }

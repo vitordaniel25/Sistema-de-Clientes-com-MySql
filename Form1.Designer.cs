@@ -2,6 +2,7 @@
 {
     partial class Form1
     {
+
         /// <summary>
         /// Variável de designer necessária.
         /// </summary>
@@ -28,6 +29,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHome = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btConsultar = new System.Windows.Forms.Button();
@@ -38,6 +43,7 @@
             this.txbCEP = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txbCPF = new System.Windows.Forms.MaskedTextBox();
+            this.txbTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txbData = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,7 +76,7 @@
             this.btNome = new System.Windows.Forms.Button();
             this.btBuscar = new System.Windows.Forms.Button();
             this.txbBuscar = new System.Windows.Forms.TextBox();
-            this.txbTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlCadastro.SuspendLayout();
@@ -229,6 +235,19 @@
             this.txbCPF.Size = new System.Drawing.Size(216, 35);
             this.txbCPF.TabIndex = 3;
             this.txbCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txbTelefone
+            // 
+            this.txbTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbTelefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbTelefone.Font = new System.Drawing.Font("Century Gothic", 17F);
+            this.txbTelefone.ForeColor = System.Drawing.Color.White;
+            this.txbTelefone.Location = new System.Drawing.Point(28, 445);
+            this.txbTelefone.Mask = "(00)0 0000 0000";
+            this.txbTelefone.Name = "txbTelefone";
+            this.txbTelefone.Size = new System.Drawing.Size(196, 35);
+            this.txbTelefone.TabIndex = 11;
+            this.txbTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txbData
             // 
@@ -484,6 +503,7 @@
             // pnlConsulta
             // 
             this.pnlConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
+            this.pnlConsulta.Controls.Add(this.button1);
             this.pnlConsulta.Controls.Add(this.label12);
             this.pnlConsulta.Controls.Add(this.dgvBuscar);
             this.pnlConsulta.Controls.Add(this.btVoltar2);
@@ -512,10 +532,44 @@
             // 
             // dgvBuscar
             // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(60)))), ((int)(((byte)(150)))));
+            this.dgvBuscar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.dgvBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 7F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBuscar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvBuscar.ColumnHeadersHeight = 29;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 7F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBuscar.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvBuscar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.dgvBuscar.Location = new System.Drawing.Point(27, 162);
             this.dgvBuscar.Name = "dgvBuscar";
+            this.dgvBuscar.ReadOnly = true;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 7F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBuscar.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvBuscar.RowHeadersVisible = false;
             this.dgvBuscar.RowHeadersWidth = 51;
             this.dgvBuscar.RowTemplate.Height = 24;
             this.dgvBuscar.Size = new System.Drawing.Size(599, 320);
@@ -537,29 +591,33 @@
             // 
             // btTodos
             // 
-            this.btTodos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btTodos.BackColor = System.Drawing.Color.DimGray;
             this.btTodos.FlatAppearance.BorderSize = 0;
             this.btTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btTodos.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.btTodos.ForeColor = System.Drawing.Color.DarkGray;
             this.btTodos.Location = new System.Drawing.Point(540, 87);
             this.btTodos.Name = "btTodos";
             this.btTodos.Size = new System.Drawing.Size(86, 29);
             this.btTodos.TabIndex = 4;
             this.btTodos.Text = "Todos";
             this.btTodos.UseVisualStyleBackColor = false;
+            this.btTodos.Click += new System.EventHandler(this.btTodos_Click);
             // 
             // btID
             // 
-            this.btID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btID.BackColor = System.Drawing.Color.DimGray;
             this.btID.FlatAppearance.BorderSize = 0;
             this.btID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btID.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.btID.ForeColor = System.Drawing.Color.DarkGray;
             this.btID.Location = new System.Drawing.Point(120, 87);
             this.btID.Name = "btID";
             this.btID.Size = new System.Drawing.Size(86, 29);
             this.btID.TabIndex = 4;
             this.btID.Text = "ID";
             this.btID.UseVisualStyleBackColor = false;
+            this.btID.Click += new System.EventHandler(this.btID_Click);
             // 
             // btNome
             // 
@@ -573,6 +631,7 @@
             this.btNome.TabIndex = 4;
             this.btNome.Text = "Nome";
             this.btNome.UseVisualStyleBackColor = false;
+            this.btNome.Click += new System.EventHandler(this.btNome_Click);
             // 
             // btBuscar
             // 
@@ -586,6 +645,7 @@
             this.btBuscar.TabIndex = 4;
             this.btBuscar.Text = "Buscar";
             this.btBuscar.UseVisualStyleBackColor = false;
+            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
             // 
             // txbBuscar
             // 
@@ -598,18 +658,17 @@
             this.txbBuscar.Size = new System.Drawing.Size(599, 34);
             this.txbBuscar.TabIndex = 1;
             // 
-            // txbTelefone
+            // button1
             // 
-            this.txbTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.txbTelefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbTelefone.Font = new System.Drawing.Font("Century Gothic", 17F);
-            this.txbTelefone.ForeColor = System.Drawing.Color.White;
-            this.txbTelefone.Location = new System.Drawing.Point(28, 445);
-            this.txbTelefone.Mask = "(00)0 0000 0000";
-            this.txbTelefone.Name = "txbTelefone";
-            this.txbTelefone.Size = new System.Drawing.Size(196, 35);
-            this.txbTelefone.TabIndex = 11;
-            this.txbTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(392, 31);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(55, 48);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -617,9 +676,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(657, 600);
-            this.Controls.Add(this.pnlCadastro);
-            this.Controls.Add(this.pnlHome);
             this.Controls.Add(this.pnlConsulta);
+            this.Controls.Add(this.pnlHome);
+            this.Controls.Add(this.pnlCadastro);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Arial", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -685,6 +744,7 @@
         private System.Windows.Forms.TextBox txbEmail;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.MaskedTextBox txbTelefone;
+        private System.Windows.Forms.Button button1;
     }
 }
 

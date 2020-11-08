@@ -12,6 +12,7 @@ namespace SistemasDeClientes
 {
     public partial class Form1 : Form
     {
+        string parametro="nome";
         public Form1()
         {
             InitializeComponent();
@@ -55,9 +56,63 @@ namespace SistemasDeClientes
 
         private void btCadastrar_Click(object sender, EventArgs e)
         {
-            var salvar = new ConexãoSql();
-            salvar.SalvarNoBanco(txbNome.Text, txbEmail.Text, txbTelefone.Text, txbData.Text, txbCPF.Text, txbRua.Text,
+            var salvar = new Casdastrar();
+            bool boolLimpar = salvar.SalvarNoBanco(txbNome.Text, txbEmail.Text, txbTelefone.Text, txbData.Text, txbCPF.Text, txbRua.Text,
             txbBairro.Text, txbCidade.Text, txbNumero.Text, txbCEP.Text, txbUF.Text);
+            if (boolLimpar) { limpar(); }
+        }
+        private void limpar()
+        {
+            txbNome.Text = "";
+            txbEmail.Text = ""; 
+            txbTelefone.Text = "";
+            txbData.Text = "";
+            txbCPF.Text = "";
+            txbRua.Text = "";
+            txbBairro.Text = "";
+            txbCidade.Text = "";
+            txbNumero.Text = "";
+            txbCEP.Text = "";
+            txbUF.Text = "";
+        }
+
+        private void btBuscar_Click(object sender, EventArgs e)
+        {
+            var buscar = new Consultar();
+            dgvBuscar.DataSource = buscar.ConsultarNoBanco(parametro, txbBuscar.Text);
+        }
+
+        private void btNome_Click(object sender, EventArgs e)
+        {
+            btNome.BackColor = Color.FromArgb(25, 40, 60);
+            btNome.ForeColor = System.Drawing.Color.White;
+            btID.ForeColor = System.Drawing.Color.DarkGray;
+            btID.BackColor = System.Drawing.Color.DimGray;
+            btTodos.ForeColor = System.Drawing.Color.DarkGray;
+            btTodos.BackColor = System.Drawing.Color.DimGray;
+            parametro = "nome";
+        }
+
+        private void btID_Click(object sender, EventArgs e)
+        {
+            btID.ForeColor = System.Drawing.Color.White;
+            btID.BackColor = Color.FromArgb(25, 40, 60);
+            btNome.ForeColor = System.Drawing.Color.DarkGray;
+            btNome.BackColor = System.Drawing.Color.DimGray;
+            btTodos.ForeColor = System.Drawing.Color.DarkGray;
+            btTodos.BackColor = System.Drawing.Color.DimGray;
+            parametro = "ID";
+        }
+
+        private void btTodos_Click(object sender, EventArgs e)
+        {
+            btTodos.ForeColor = System.Drawing.Color.White;
+            btTodos.BackColor = Color.FromArgb(25, 40, 60);
+            btNome.ForeColor = System.Drawing.Color.DarkGray;
+            btNome.BackColor = System.Drawing.Color.DimGray;
+            btID.ForeColor = System.Drawing.Color.DarkGray;
+            btID.BackColor = System.Drawing.Color.DimGray;
+            parametro = "todos";
         }
     }
 }
