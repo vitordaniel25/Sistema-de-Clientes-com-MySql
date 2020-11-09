@@ -29,13 +29,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnlHome = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btConsultar = new System.Windows.Forms.Button();
+            this.btAtualizar = new System.Windows.Forms.Button();
             this.btNovo = new System.Windows.Forms.Button();
             this.pnlCadastro = new System.Windows.Forms.Panel();
             this.btVoltar = new System.Windows.Forms.Button();
@@ -73,9 +75,10 @@
             this.btNome = new System.Windows.Forms.Button();
             this.btBuscar = new System.Windows.Forms.Button();
             this.txbBuscar = new System.Windows.Forms.TextBox();
-            this.btAtualizar = new System.Windows.Forms.Button();
             this.pnlAtualizar = new System.Windows.Forms.Panel();
             this.btVoltar3 = new System.Windows.Forms.Button();
+            this.btOK = new System.Windows.Forms.Button();
+            this.btExcluir = new System.Windows.Forms.Button();
             this.btAtualizarCliente = new System.Windows.Forms.Button();
             this.txbCEPEdit = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -88,7 +91,11 @@
             this.txbUFEdit = new System.Windows.Forms.TextBox();
             this.txbNumeroEdit = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.txbID = new System.Windows.Forms.TextBox();
+            this.txbMostrarID = new System.Windows.Forms.TextBox();
             this.txbBairroEdit = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.txbCidadeEdit = new System.Windows.Forms.TextBox();
@@ -100,12 +107,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.txbNomeEdit = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.txbID = new System.Windows.Forms.TextBox();
-            this.btOK = new System.Windows.Forms.Button();
-            this.btExcluir = new System.Windows.Forms.Button();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txbMostrarID = new System.Windows.Forms.TextBox();
             this.pnlHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlCadastro.SuspendLayout();
@@ -132,9 +133,9 @@
             // 
             this.pictureBox1.BackgroundImage = global::SistemasDeClientes.Properties.Resources.icone22;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 37);
+            this.pictureBox1.Location = new System.Drawing.Point(76, 60);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(599, 433);
+            this.pictureBox1.Size = new System.Drawing.Size(520, 399);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -151,6 +152,20 @@
             this.btConsultar.Text = "Consultar";
             this.btConsultar.UseVisualStyleBackColor = false;
             this.btConsultar.Click += new System.EventHandler(this.btConsultar_Click);
+            // 
+            // btAtualizar
+            // 
+            this.btAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btAtualizar.FlatAppearance.BorderSize = 0;
+            this.btAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAtualizar.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.btAtualizar.Location = new System.Drawing.Point(229, 488);
+            this.btAtualizar.Name = "btAtualizar";
+            this.btAtualizar.Size = new System.Drawing.Size(196, 60);
+            this.btAtualizar.TabIndex = 1;
+            this.btAtualizar.Text = "Atualizar";
+            this.btAtualizar.UseVisualStyleBackColor = false;
+            this.btAtualizar.Click += new System.EventHandler(this.btAtualizar_Click);
             // 
             // btNovo
             // 
@@ -491,7 +506,7 @@
             this.pnlConsulta.Controls.Add(this.btNome);
             this.pnlConsulta.Controls.Add(this.btBuscar);
             this.pnlConsulta.Controls.Add(this.txbBuscar);
-            this.pnlConsulta.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlConsulta.Font = new System.Drawing.Font("Century Gothic", 8F);
             this.pnlConsulta.ForeColor = System.Drawing.Color.White;
             this.pnlConsulta.Location = new System.Drawing.Point(0, 0);
             this.pnlConsulta.Name = "pnlConsulta";
@@ -525,46 +540,46 @@
             // 
             // dgvBuscar
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(60)))), ((int)(((byte)(150)))));
-            this.dgvBuscar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(60)))), ((int)(((byte)(150)))));
+            this.dgvBuscar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBuscar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvBuscar.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.dgvBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBuscar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBuscar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBuscar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBuscar.ColumnHeadersHeight = 29;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 8F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBuscar.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBuscar.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvBuscar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.dgvBuscar.Location = new System.Drawing.Point(27, 162);
             this.dgvBuscar.Name = "dgvBuscar";
             this.dgvBuscar.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 8F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBuscar.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBuscar.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvBuscar.RowHeadersVisible = false;
             this.dgvBuscar.RowHeadersWidth = 51;
             this.dgvBuscar.RowTemplate.Height = 24;
@@ -655,20 +670,6 @@
             this.txbBuscar.Size = new System.Drawing.Size(599, 34);
             this.txbBuscar.TabIndex = 4;
             // 
-            // btAtualizar
-            // 
-            this.btAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.btAtualizar.FlatAppearance.BorderSize = 0;
-            this.btAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAtualizar.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.btAtualizar.Location = new System.Drawing.Point(229, 488);
-            this.btAtualizar.Name = "btAtualizar";
-            this.btAtualizar.Size = new System.Drawing.Size(196, 60);
-            this.btAtualizar.TabIndex = 1;
-            this.btAtualizar.Text = "Atualizar";
-            this.btAtualizar.UseVisualStyleBackColor = false;
-            this.btAtualizar.Click += new System.EventHandler(this.btAtualizar_Click);
-            // 
             // pnlAtualizar
             // 
             this.pnlAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
@@ -724,6 +725,35 @@
             this.btVoltar3.Text = "Voltar";
             this.btVoltar3.UseVisualStyleBackColor = false;
             this.btVoltar3.Click += new System.EventHandler(this.btVoltar3_Click);
+            // 
+            // btOK
+            // 
+            this.btOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btOK.FlatAppearance.BorderSize = 0;
+            this.btOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btOK.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.btOK.Location = new System.Drawing.Point(569, 63);
+            this.btOK.Name = "btOK";
+            this.btOK.Size = new System.Drawing.Size(57, 34);
+            this.btOK.TabIndex = 2;
+            this.btOK.Text = "OK";
+            this.btOK.UseVisualStyleBackColor = false;
+            this.btOK.Click += new System.EventHandler(this.btOK_Click);
+            // 
+            // btExcluir
+            // 
+            this.btExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btExcluir.Enabled = false;
+            this.btExcluir.FlatAppearance.BorderSize = 0;
+            this.btExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btExcluir.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.btExcluir.Location = new System.Drawing.Point(251, 488);
+            this.btExcluir.Name = "btExcluir";
+            this.btExcluir.Size = new System.Drawing.Size(173, 60);
+            this.btExcluir.TabIndex = 16;
+            this.btExcluir.Text = "Excluir";
+            this.btExcluir.UseVisualStyleBackColor = false;
+            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
             // btAtualizarCliente
             // 
@@ -870,6 +900,30 @@
             this.label18.TabIndex = 0;
             this.label18.Text = "UF";
             // 
+            // txbID
+            // 
+            this.txbID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txbID.ForeColor = System.Drawing.Color.White;
+            this.txbID.Location = new System.Drawing.Point(331, 63);
+            this.txbID.Name = "txbID";
+            this.txbID.Size = new System.Drawing.Size(232, 34);
+            this.txbID.TabIndex = 1;
+            this.txbID.TextChanged += new System.EventHandler(this.txbID_TextChanged);
+            // 
+            // txbMostrarID
+            // 
+            this.txbMostrarID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbMostrarID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbMostrarID.Enabled = false;
+            this.txbMostrarID.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txbMostrarID.ForeColor = System.Drawing.Color.White;
+            this.txbMostrarID.Location = new System.Drawing.Point(234, 446);
+            this.txbMostrarID.Name = "txbMostrarID";
+            this.txbMostrarID.Size = new System.Drawing.Size(127, 34);
+            this.txbMostrarID.TabIndex = 9;
+            // 
             // txbBairroEdit
             // 
             this.txbBairroEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
@@ -881,6 +935,26 @@
             this.txbBairroEdit.Name = "txbBairroEdit";
             this.txbBairroEdit.Size = new System.Drawing.Size(274, 34);
             this.txbBairroEdit.TabIndex = 11;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label26.Location = new System.Drawing.Point(327, 35);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(103, 22);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Digite o ID";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label27.Location = new System.Drawing.Point(230, 418);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(29, 22);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "ID";
             // 
             // label19
             // 
@@ -1000,91 +1074,19 @@
             this.label25.TabIndex = 0;
             this.label25.Text = "Nome Completo";
             // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.label26.Location = new System.Drawing.Point(327, 35);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(103, 22);
-            this.label26.TabIndex = 0;
-            this.label26.Text = "Digite o ID";
-            // 
-            // txbID
-            // 
-            this.txbID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.txbID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.txbID.ForeColor = System.Drawing.Color.White;
-            this.txbID.Location = new System.Drawing.Point(331, 63);
-            this.txbID.Name = "txbID";
-            this.txbID.Size = new System.Drawing.Size(232, 34);
-            this.txbID.TabIndex = 1;
-            this.txbID.TextChanged += new System.EventHandler(this.txbID_TextChanged);
-            // 
-            // btOK
-            // 
-            this.btOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.btOK.FlatAppearance.BorderSize = 0;
-            this.btOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btOK.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.btOK.Location = new System.Drawing.Point(569, 63);
-            this.btOK.Name = "btOK";
-            this.btOK.Size = new System.Drawing.Size(57, 34);
-            this.btOK.TabIndex = 2;
-            this.btOK.Text = "OK";
-            this.btOK.UseVisualStyleBackColor = false;
-            this.btOK.Click += new System.EventHandler(this.btOK_Click);
-            // 
-            // btExcluir
-            // 
-            this.btExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.btExcluir.Enabled = false;
-            this.btExcluir.FlatAppearance.BorderSize = 0;
-            this.btExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btExcluir.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.btExcluir.Location = new System.Drawing.Point(251, 488);
-            this.btExcluir.Name = "btExcluir";
-            this.btExcluir.Size = new System.Drawing.Size(173, 60);
-            this.btExcluir.TabIndex = 16;
-            this.btExcluir.Text = "Excluir";
-            this.btExcluir.UseVisualStyleBackColor = false;
-            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.label27.Location = new System.Drawing.Point(230, 418);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(29, 22);
-            this.label27.TabIndex = 0;
-            this.label27.Text = "ID";
-            // 
-            // txbMostrarID
-            // 
-            this.txbMostrarID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.txbMostrarID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbMostrarID.Enabled = false;
-            this.txbMostrarID.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.txbMostrarID.ForeColor = System.Drawing.Color.White;
-            this.txbMostrarID.Location = new System.Drawing.Point(234, 446);
-            this.txbMostrarID.Name = "txbMostrarID";
-            this.txbMostrarID.Size = new System.Drawing.Size(127, 34);
-            this.txbMostrarID.TabIndex = 9;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(25F, 49F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(657, 560);
-            this.Controls.Add(this.pnlAtualizar);
             this.Controls.Add(this.pnlHome);
             this.Controls.Add(this.pnlConsulta);
+            this.Controls.Add(this.pnlAtualizar);
             this.Controls.Add(this.pnlCadastro);
             this.Font = new System.Drawing.Font("Arial", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(9);
             this.MaximizeBox = false;
             this.Name = "Form1";

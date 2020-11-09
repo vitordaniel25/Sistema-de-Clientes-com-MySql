@@ -56,7 +56,7 @@ namespace SistemasDeClientes
                 pdfDoc.Close();
                 stream.Close();
             }
-            MessageBox.Show("PDF criado na pasta C:\\PDF");
+            MessageBox.Show("PDF criado na pasta C:\\PDF", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

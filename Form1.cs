@@ -97,7 +97,7 @@ namespace SistemasDeClientes
 
         private void btBuscar_Click(object sender, EventArgs e)
         {
-
+           
             var buscar = new Consultar();
             switch (parametro)
             {
@@ -268,7 +268,7 @@ namespace SistemasDeClientes
 
         private void btExcluir_Click(object sender, EventArgs e)
         {
-            if (DialogResult.Yes == MessageBox.Show("Tem certeza que deseja apagar cliente?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
+            if (DialogResult.Yes == MessageBox.Show("Tem certeza que deseja apagar cliente?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2))
             {
                 MessageBox.Show("Registro apagado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 var excluir = new Excluir();

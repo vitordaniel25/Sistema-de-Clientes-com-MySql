@@ -40,7 +40,7 @@ namespace SistemasDeClientes
 
                 conexao.Open();
                 comando.ExecuteNonQuery();
-                MessageBox.Show("Cadastrado com sucesso!");
+                MessageBox.Show("Cadastrado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limpar = true;
             }
             catch (Exception ex)
