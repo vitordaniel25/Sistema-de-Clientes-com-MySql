@@ -29,10 +29,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHome = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btConsultar = new System.Windows.Forms.Button();
@@ -63,10 +63,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txbNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btMinimizar = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
             this.pnlConsulta = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
@@ -77,12 +73,45 @@
             this.btNome = new System.Windows.Forms.Button();
             this.btBuscar = new System.Windows.Forms.Button();
             this.txbBuscar = new System.Windows.Forms.TextBox();
+            this.btAtualizar = new System.Windows.Forms.Button();
+            this.pnlAtualizar = new System.Windows.Forms.Panel();
+            this.btVoltar3 = new System.Windows.Forms.Button();
+            this.btAtualizarCliente = new System.Windows.Forms.Button();
+            this.txbCEPEdit = new System.Windows.Forms.MaskedTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txbCPFEdit = new System.Windows.Forms.MaskedTextBox();
+            this.txbTelefoneEdit = new System.Windows.Forms.MaskedTextBox();
+            this.txbDataEdit = new System.Windows.Forms.MaskedTextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txbUFEdit = new System.Windows.Forms.TextBox();
+            this.txbNumeroEdit = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txbBairroEdit = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txbCidadeEdit = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txbRuaEdit = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txbEmailEdit = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txbNomeEdit = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txbID = new System.Windows.Forms.TextBox();
+            this.btOK = new System.Windows.Forms.Button();
+            this.btExcluir = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txbMostrarID = new System.Windows.Forms.TextBox();
             this.pnlHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlCadastro.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.pnlConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).BeginInit();
+            this.pnlAtualizar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHome
@@ -90,10 +119,11 @@
             this.pnlHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
             this.pnlHome.Controls.Add(this.pictureBox1);
             this.pnlHome.Controls.Add(this.btConsultar);
+            this.pnlHome.Controls.Add(this.btAtualizar);
             this.pnlHome.Controls.Add(this.btNovo);
             this.pnlHome.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlHome.ForeColor = System.Drawing.Color.White;
-            this.pnlHome.Location = new System.Drawing.Point(0, 40);
+            this.pnlHome.Location = new System.Drawing.Point(0, 0);
             this.pnlHome.Name = "pnlHome";
             this.pnlHome.Size = new System.Drawing.Size(657, 560);
             this.pnlHome.TabIndex = 0;
@@ -116,7 +146,7 @@
             this.btConsultar.Font = new System.Drawing.Font("Century Gothic", 15F);
             this.btConsultar.Location = new System.Drawing.Point(28, 488);
             this.btConsultar.Name = "btConsultar";
-            this.btConsultar.Size = new System.Drawing.Size(295, 60);
+            this.btConsultar.Size = new System.Drawing.Size(196, 60);
             this.btConsultar.TabIndex = 1;
             this.btConsultar.Text = "Consultar";
             this.btConsultar.UseVisualStyleBackColor = false;
@@ -128,9 +158,9 @@
             this.btNovo.FlatAppearance.BorderSize = 0;
             this.btNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btNovo.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.btNovo.Location = new System.Drawing.Point(332, 488);
+            this.btNovo.Location = new System.Drawing.Point(430, 488);
             this.btNovo.Name = "btNovo";
-            this.btNovo.Size = new System.Drawing.Size(295, 60);
+            this.btNovo.Size = new System.Drawing.Size(196, 60);
             this.btNovo.TabIndex = 1;
             this.btNovo.Text = "Novo";
             this.btNovo.UseVisualStyleBackColor = false;
@@ -166,7 +196,7 @@
             this.pnlCadastro.Controls.Add(this.label1);
             this.pnlCadastro.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlCadastro.ForeColor = System.Drawing.Color.White;
-            this.pnlCadastro.Location = new System.Drawing.Point(0, 40);
+            this.pnlCadastro.Location = new System.Drawing.Point(0, 0);
             this.pnlCadastro.Name = "pnlCadastro";
             this.pnlCadastro.Size = new System.Drawing.Size(657, 560);
             this.pnlCadastro.TabIndex = 1;
@@ -449,57 +479,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome Completo";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-            this.panel2.Controls.Add(this.btMinimizar);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(657, 40);
-            this.panel2.TabIndex = 2;
-            // 
-            // btMinimizar
-            // 
-            this.btMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btMinimizar.BackgroundImage = global::SistemasDeClientes.Properties.Resources.Minimizar;
-            this.btMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btMinimizar.FlatAppearance.BorderSize = 0;
-            this.btMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btMinimizar.Location = new System.Drawing.Point(582, 3);
-            this.btMinimizar.Name = "btMinimizar";
-            this.btMinimizar.Size = new System.Drawing.Size(32, 32);
-            this.btMinimizar.TabIndex = 0;
-            this.btMinimizar.UseVisualStyleBackColor = false;
-            this.btMinimizar.Click += new System.EventHandler(this.btMinimizar_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImage = global::SistemasDeClientes.Properties.Resources.Fechar;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(620, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(32, 32);
-            this.button6.TabIndex = 0;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.label10.Location = new System.Drawing.Point(23, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(184, 22);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Sistema de Clientes";
-            // 
             // pnlConsulta
             // 
             this.pnlConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
@@ -514,7 +493,7 @@
             this.pnlConsulta.Controls.Add(this.txbBuscar);
             this.pnlConsulta.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlConsulta.ForeColor = System.Drawing.Color.White;
-            this.pnlConsulta.Location = new System.Drawing.Point(0, 40);
+            this.pnlConsulta.Location = new System.Drawing.Point(0, 0);
             this.pnlConsulta.Name = "pnlConsulta";
             this.pnlConsulta.Size = new System.Drawing.Size(657, 560);
             this.pnlConsulta.TabIndex = 5;
@@ -525,11 +504,12 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(392, 31);
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.button1.Location = new System.Drawing.Point(540, 87);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 48);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 29);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Abrir";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -545,51 +525,51 @@
             // 
             // dgvBuscar
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(60)))), ((int)(((byte)(150)))));
-            this.dgvBuscar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(60)))), ((int)(((byte)(150)))));
+            this.dgvBuscar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvBuscar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvBuscar.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.dgvBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBuscar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBuscar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBuscar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvBuscar.ColumnHeadersHeight = 29;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBuscar.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 8F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBuscar.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvBuscar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.dgvBuscar.Location = new System.Drawing.Point(27, 162);
             this.dgvBuscar.Name = "dgvBuscar";
             this.dgvBuscar.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBuscar.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 8F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBuscar.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvBuscar.RowHeadersVisible = false;
             this.dgvBuscar.RowHeadersWidth = 51;
             this.dgvBuscar.RowTemplate.Height = 24;
             this.dgvBuscar.Size = new System.Drawing.Size(599, 320);
-            this.dgvBuscar.TabIndex = 5;
+            this.dgvBuscar.TabIndex = 9;
             this.dgvBuscar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBuscar_CellContentClick);
             // 
             // btVoltar2
@@ -601,7 +581,7 @@
             this.btVoltar2.Location = new System.Drawing.Point(27, 488);
             this.btVoltar2.Name = "btVoltar2";
             this.btVoltar2.Size = new System.Drawing.Size(295, 60);
-            this.btVoltar2.TabIndex = 3;
+            this.btVoltar2.TabIndex = 7;
             this.btVoltar2.Text = "Voltar";
             this.btVoltar2.UseVisualStyleBackColor = false;
             this.btVoltar2.Click += new System.EventHandler(this.btVoltar2_Click);
@@ -613,10 +593,10 @@
             this.btTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btTodos.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.btTodos.ForeColor = System.Drawing.Color.DarkGray;
-            this.btTodos.Location = new System.Drawing.Point(540, 87);
+            this.btTodos.Location = new System.Drawing.Point(212, 87);
             this.btTodos.Name = "btTodos";
             this.btTodos.Size = new System.Drawing.Size(86, 29);
-            this.btTodos.TabIndex = 4;
+            this.btTodos.TabIndex = 3;
             this.btTodos.Text = "Todos";
             this.btTodos.UseVisualStyleBackColor = false;
             this.btTodos.Click += new System.EventHandler(this.btTodos_Click);
@@ -631,7 +611,7 @@
             this.btID.Location = new System.Drawing.Point(120, 87);
             this.btID.Name = "btID";
             this.btID.Size = new System.Drawing.Size(86, 29);
-            this.btID.TabIndex = 4;
+            this.btID.TabIndex = 2;
             this.btID.Text = "ID";
             this.btID.UseVisualStyleBackColor = false;
             this.btID.Click += new System.EventHandler(this.btID_Click);
@@ -645,7 +625,7 @@
             this.btNome.Location = new System.Drawing.Point(28, 87);
             this.btNome.Name = "btNome";
             this.btNome.Size = new System.Drawing.Size(86, 29);
-            this.btNome.TabIndex = 4;
+            this.btNome.TabIndex = 1;
             this.btNome.Text = "Nome";
             this.btNome.UseVisualStyleBackColor = false;
             this.btNome.Click += new System.EventHandler(this.btNome_Click);
@@ -659,7 +639,7 @@
             this.btBuscar.Location = new System.Drawing.Point(331, 488);
             this.btBuscar.Name = "btBuscar";
             this.btBuscar.Size = new System.Drawing.Size(295, 60);
-            this.btBuscar.TabIndex = 4;
+            this.btBuscar.TabIndex = 6;
             this.btBuscar.Text = "Buscar";
             this.btBuscar.UseVisualStyleBackColor = false;
             this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
@@ -673,33 +653,452 @@
             this.txbBuscar.Location = new System.Drawing.Point(28, 122);
             this.txbBuscar.Name = "txbBuscar";
             this.txbBuscar.Size = new System.Drawing.Size(599, 34);
-            this.txbBuscar.TabIndex = 1;
+            this.txbBuscar.TabIndex = 4;
+            // 
+            // btAtualizar
+            // 
+            this.btAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btAtualizar.FlatAppearance.BorderSize = 0;
+            this.btAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAtualizar.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.btAtualizar.Location = new System.Drawing.Point(229, 488);
+            this.btAtualizar.Name = "btAtualizar";
+            this.btAtualizar.Size = new System.Drawing.Size(196, 60);
+            this.btAtualizar.TabIndex = 1;
+            this.btAtualizar.Text = "Atualizar";
+            this.btAtualizar.UseVisualStyleBackColor = false;
+            this.btAtualizar.Click += new System.EventHandler(this.btAtualizar_Click);
+            // 
+            // pnlAtualizar
+            // 
+            this.pnlAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
+            this.pnlAtualizar.Controls.Add(this.btVoltar3);
+            this.pnlAtualizar.Controls.Add(this.btOK);
+            this.pnlAtualizar.Controls.Add(this.btExcluir);
+            this.pnlAtualizar.Controls.Add(this.btAtualizarCliente);
+            this.pnlAtualizar.Controls.Add(this.txbCEPEdit);
+            this.pnlAtualizar.Controls.Add(this.label10);
+            this.pnlAtualizar.Controls.Add(this.txbCPFEdit);
+            this.pnlAtualizar.Controls.Add(this.txbTelefoneEdit);
+            this.pnlAtualizar.Controls.Add(this.txbDataEdit);
+            this.pnlAtualizar.Controls.Add(this.label15);
+            this.pnlAtualizar.Controls.Add(this.label16);
+            this.pnlAtualizar.Controls.Add(this.label17);
+            this.pnlAtualizar.Controls.Add(this.txbUFEdit);
+            this.pnlAtualizar.Controls.Add(this.txbNumeroEdit);
+            this.pnlAtualizar.Controls.Add(this.label18);
+            this.pnlAtualizar.Controls.Add(this.txbID);
+            this.pnlAtualizar.Controls.Add(this.txbMostrarID);
+            this.pnlAtualizar.Controls.Add(this.txbBairroEdit);
+            this.pnlAtualizar.Controls.Add(this.label26);
+            this.pnlAtualizar.Controls.Add(this.label27);
+            this.pnlAtualizar.Controls.Add(this.label19);
+            this.pnlAtualizar.Controls.Add(this.label20);
+            this.pnlAtualizar.Controls.Add(this.txbCidadeEdit);
+            this.pnlAtualizar.Controls.Add(this.label21);
+            this.pnlAtualizar.Controls.Add(this.txbRuaEdit);
+            this.pnlAtualizar.Controls.Add(this.label22);
+            this.pnlAtualizar.Controls.Add(this.label23);
+            this.pnlAtualizar.Controls.Add(this.txbEmailEdit);
+            this.pnlAtualizar.Controls.Add(this.label24);
+            this.pnlAtualizar.Controls.Add(this.txbNomeEdit);
+            this.pnlAtualizar.Controls.Add(this.label25);
+            this.pnlAtualizar.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlAtualizar.ForeColor = System.Drawing.Color.White;
+            this.pnlAtualizar.Location = new System.Drawing.Point(0, 0);
+            this.pnlAtualizar.Name = "pnlAtualizar";
+            this.pnlAtualizar.Size = new System.Drawing.Size(657, 560);
+            this.pnlAtualizar.TabIndex = 0;
+            this.pnlAtualizar.Visible = false;
+            // 
+            // btVoltar3
+            // 
+            this.btVoltar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btVoltar3.FlatAppearance.BorderSize = 0;
+            this.btVoltar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btVoltar3.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.btVoltar3.Location = new System.Drawing.Point(28, 488);
+            this.btVoltar3.Name = "btVoltar3";
+            this.btVoltar3.Size = new System.Drawing.Size(196, 60);
+            this.btVoltar3.TabIndex = 15;
+            this.btVoltar3.Text = "Voltar";
+            this.btVoltar3.UseVisualStyleBackColor = false;
+            this.btVoltar3.Click += new System.EventHandler(this.btVoltar3_Click);
+            // 
+            // btAtualizarCliente
+            // 
+            this.btAtualizarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btAtualizarCliente.Enabled = false;
+            this.btAtualizarCliente.FlatAppearance.BorderSize = 0;
+            this.btAtualizarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAtualizarCliente.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.btAtualizarCliente.Location = new System.Drawing.Point(454, 488);
+            this.btAtualizarCliente.Name = "btAtualizarCliente";
+            this.btAtualizarCliente.Size = new System.Drawing.Size(173, 60);
+            this.btAtualizarCliente.TabIndex = 14;
+            this.btAtualizarCliente.Text = "Atualizar";
+            this.btAtualizarCliente.UseVisualStyleBackColor = false;
+            this.btAtualizarCliente.Click += new System.EventHandler(this.btAtualizarCliente_Click);
+            // 
+            // txbCEPEdit
+            // 
+            this.txbCEPEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbCEPEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbCEPEdit.Enabled = false;
+            this.txbCEPEdit.Font = new System.Drawing.Font("Century Gothic", 17F);
+            this.txbCEPEdit.ForeColor = System.Drawing.Color.White;
+            this.txbCEPEdit.Location = new System.Drawing.Point(454, 175);
+            this.txbCEPEdit.Mask = "00000-000";
+            this.txbCEPEdit.Name = "txbCEPEdit";
+            this.txbCEPEdit.Size = new System.Drawing.Size(173, 35);
+            this.txbCEPEdit.TabIndex = 6;
+            this.txbCEPEdit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.label10.Location = new System.Drawing.Point(22, 37);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(215, 31);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Atualizar Cliente";
+            // 
+            // txbCPFEdit
+            // 
+            this.txbCPFEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbCPFEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbCPFEdit.Enabled = false;
+            this.txbCPFEdit.Font = new System.Drawing.Font("Century Gothic", 17F);
+            this.txbCPFEdit.ForeColor = System.Drawing.Color.White;
+            this.txbCPFEdit.Location = new System.Drawing.Point(232, 175);
+            this.txbCPFEdit.Mask = "000.000.000-00";
+            this.txbCPFEdit.Name = "txbCPFEdit";
+            this.txbCPFEdit.Size = new System.Drawing.Size(216, 35);
+            this.txbCPFEdit.TabIndex = 5;
+            this.txbCPFEdit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txbTelefoneEdit
+            // 
+            this.txbTelefoneEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbTelefoneEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbTelefoneEdit.Enabled = false;
+            this.txbTelefoneEdit.Font = new System.Drawing.Font("Century Gothic", 17F);
+            this.txbTelefoneEdit.ForeColor = System.Drawing.Color.White;
+            this.txbTelefoneEdit.Location = new System.Drawing.Point(28, 445);
+            this.txbTelefoneEdit.Mask = "(00)0 0000 0000";
+            this.txbTelefoneEdit.Name = "txbTelefoneEdit";
+            this.txbTelefoneEdit.Size = new System.Drawing.Size(196, 35);
+            this.txbTelefoneEdit.TabIndex = 13;
+            this.txbTelefoneEdit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txbDataEdit
+            // 
+            this.txbDataEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbDataEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbDataEdit.Enabled = false;
+            this.txbDataEdit.Font = new System.Drawing.Font("Century Gothic", 17F);
+            this.txbDataEdit.ForeColor = System.Drawing.Color.White;
+            this.txbDataEdit.Location = new System.Drawing.Point(28, 175);
+            this.txbDataEdit.Mask = "00/00/0000";
+            this.txbDataEdit.Name = "txbDataEdit";
+            this.txbDataEdit.Size = new System.Drawing.Size(196, 35);
+            this.txbDataEdit.TabIndex = 4;
+            this.txbDataEdit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label15.Location = new System.Drawing.Point(450, 147);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(46, 22);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "CEP";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label16.Location = new System.Drawing.Point(230, 147);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(45, 22);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "CPF";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label17.Location = new System.Drawing.Point(23, 147);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(201, 22);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Data de Nascimento";
+            // 
+            // txbUFEdit
+            // 
+            this.txbUFEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbUFEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbUFEdit.Enabled = false;
+            this.txbUFEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txbUFEdit.ForeColor = System.Drawing.Color.White;
+            this.txbUFEdit.Location = new System.Drawing.Point(553, 246);
+            this.txbUFEdit.Name = "txbUFEdit";
+            this.txbUFEdit.Size = new System.Drawing.Size(74, 34);
+            this.txbUFEdit.TabIndex = 9;
+            // 
+            // txbNumeroEdit
+            // 
+            this.txbNumeroEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbNumeroEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbNumeroEdit.Enabled = false;
+            this.txbNumeroEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txbNumeroEdit.ForeColor = System.Drawing.Color.White;
+            this.txbNumeroEdit.Location = new System.Drawing.Point(444, 246);
+            this.txbNumeroEdit.Name = "txbNumeroEdit";
+            this.txbNumeroEdit.Size = new System.Drawing.Size(103, 34);
+            this.txbNumeroEdit.TabIndex = 8;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label18.Location = new System.Drawing.Point(549, 218);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(31, 22);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "UF";
+            // 
+            // txbBairroEdit
+            // 
+            this.txbBairroEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbBairroEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbBairroEdit.Enabled = false;
+            this.txbBairroEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txbBairroEdit.ForeColor = System.Drawing.Color.White;
+            this.txbBairroEdit.Location = new System.Drawing.Point(353, 313);
+            this.txbBairroEdit.Name = "txbBairroEdit";
+            this.txbBairroEdit.Size = new System.Drawing.Size(274, 34);
+            this.txbBairroEdit.TabIndex = 11;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label19.Location = new System.Drawing.Point(440, 218);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(83, 22);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Número";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label20.Location = new System.Drawing.Point(349, 285);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(61, 22);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Bairro";
+            // 
+            // txbCidadeEdit
+            // 
+            this.txbCidadeEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbCidadeEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbCidadeEdit.Enabled = false;
+            this.txbCidadeEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txbCidadeEdit.ForeColor = System.Drawing.Color.White;
+            this.txbCidadeEdit.Location = new System.Drawing.Point(28, 313);
+            this.txbCidadeEdit.Name = "txbCidadeEdit";
+            this.txbCidadeEdit.Size = new System.Drawing.Size(319, 34);
+            this.txbCidadeEdit.TabIndex = 10;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label21.Location = new System.Drawing.Point(23, 285);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(79, 22);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Cidade";
+            // 
+            // txbRuaEdit
+            // 
+            this.txbRuaEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbRuaEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbRuaEdit.Enabled = false;
+            this.txbRuaEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txbRuaEdit.ForeColor = System.Drawing.Color.White;
+            this.txbRuaEdit.Location = new System.Drawing.Point(28, 246);
+            this.txbRuaEdit.Name = "txbRuaEdit";
+            this.txbRuaEdit.Size = new System.Drawing.Size(410, 34);
+            this.txbRuaEdit.TabIndex = 7;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label22.Location = new System.Drawing.Point(23, 218);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(47, 22);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Rua";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label23.Location = new System.Drawing.Point(22, 420);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(87, 22);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Telefone";
+            // 
+            // txbEmailEdit
+            // 
+            this.txbEmailEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbEmailEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbEmailEdit.Enabled = false;
+            this.txbEmailEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txbEmailEdit.ForeColor = System.Drawing.Color.White;
+            this.txbEmailEdit.Location = new System.Drawing.Point(27, 384);
+            this.txbEmailEdit.Name = "txbEmailEdit";
+            this.txbEmailEdit.Size = new System.Drawing.Size(599, 34);
+            this.txbEmailEdit.TabIndex = 12;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label24.Location = new System.Drawing.Point(22, 356);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(56, 22);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Email";
+            // 
+            // txbNomeEdit
+            // 
+            this.txbNomeEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbNomeEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbNomeEdit.Enabled = false;
+            this.txbNomeEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txbNomeEdit.ForeColor = System.Drawing.Color.White;
+            this.txbNomeEdit.Location = new System.Drawing.Point(28, 106);
+            this.txbNomeEdit.Name = "txbNomeEdit";
+            this.txbNomeEdit.Size = new System.Drawing.Size(599, 34);
+            this.txbNomeEdit.TabIndex = 3;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label25.Location = new System.Drawing.Point(23, 78);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(161, 22);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Nome Completo";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label26.Location = new System.Drawing.Point(327, 35);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(103, 22);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Digite o ID";
+            // 
+            // txbID
+            // 
+            this.txbID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txbID.ForeColor = System.Drawing.Color.White;
+            this.txbID.Location = new System.Drawing.Point(331, 63);
+            this.txbID.Name = "txbID";
+            this.txbID.Size = new System.Drawing.Size(232, 34);
+            this.txbID.TabIndex = 1;
+            this.txbID.TextChanged += new System.EventHandler(this.txbID_TextChanged);
+            // 
+            // btOK
+            // 
+            this.btOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btOK.FlatAppearance.BorderSize = 0;
+            this.btOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btOK.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.btOK.Location = new System.Drawing.Point(569, 63);
+            this.btOK.Name = "btOK";
+            this.btOK.Size = new System.Drawing.Size(57, 34);
+            this.btOK.TabIndex = 2;
+            this.btOK.Text = "OK";
+            this.btOK.UseVisualStyleBackColor = false;
+            this.btOK.Click += new System.EventHandler(this.btOK_Click);
+            // 
+            // btExcluir
+            // 
+            this.btExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btExcluir.Enabled = false;
+            this.btExcluir.FlatAppearance.BorderSize = 0;
+            this.btExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btExcluir.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.btExcluir.Location = new System.Drawing.Point(251, 488);
+            this.btExcluir.Name = "btExcluir";
+            this.btExcluir.Size = new System.Drawing.Size(173, 60);
+            this.btExcluir.TabIndex = 16;
+            this.btExcluir.Text = "Excluir";
+            this.btExcluir.UseVisualStyleBackColor = false;
+            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label27.Location = new System.Drawing.Point(230, 418);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(29, 22);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "ID";
+            // 
+            // txbMostrarID
+            // 
+            this.txbMostrarID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbMostrarID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbMostrarID.Enabled = false;
+            this.txbMostrarID.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txbMostrarID.ForeColor = System.Drawing.Color.White;
+            this.txbMostrarID.Location = new System.Drawing.Point(234, 446);
+            this.txbMostrarID.Name = "txbMostrarID";
+            this.txbMostrarID.Size = new System.Drawing.Size(127, 34);
+            this.txbMostrarID.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(25F, 49F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(657, 600);
-            this.Controls.Add(this.pnlConsulta);
+            this.ClientSize = new System.Drawing.Size(657, 560);
+            this.Controls.Add(this.pnlAtualizar);
             this.Controls.Add(this.pnlHome);
+            this.Controls.Add(this.pnlConsulta);
             this.Controls.Add(this.pnlCadastro);
-            this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Arial", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(9);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Sistema de Clientes";
             this.pnlHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlCadastro.ResumeLayout(false);
             this.pnlCadastro.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.pnlConsulta.ResumeLayout(false);
             this.pnlConsulta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).EndInit();
+            this.pnlAtualizar.ResumeLayout(false);
+            this.pnlAtualizar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -710,7 +1109,6 @@
         private System.Windows.Forms.Panel pnlCadastro;
         private System.Windows.Forms.Button btConsultar;
         private System.Windows.Forms.Button btNovo;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbNome;
@@ -739,10 +1137,7 @@
         private System.Windows.Forms.Button btNome;
         public System.Windows.Forms.DataGridView dgvBuscar;
         private System.Windows.Forms.Button btTodos;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button btMinimizar;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label14;
@@ -750,6 +1145,39 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.MaskedTextBox txbTelefone;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btAtualizar;
+        private System.Windows.Forms.Panel pnlAtualizar;
+        private System.Windows.Forms.Button btVoltar3;
+        private System.Windows.Forms.Button btAtualizarCliente;
+        private System.Windows.Forms.MaskedTextBox txbCEPEdit;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.MaskedTextBox txbCPFEdit;
+        private System.Windows.Forms.MaskedTextBox txbTelefoneEdit;
+        private System.Windows.Forms.MaskedTextBox txbDataEdit;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txbUFEdit;
+        private System.Windows.Forms.TextBox txbNumeroEdit;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txbBairroEdit;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox txbCidadeEdit;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txbRuaEdit;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox txbEmailEdit;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox txbNomeEdit;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button btOK;
+        private System.Windows.Forms.TextBox txbID;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button btExcluir;
+        private System.Windows.Forms.TextBox txbMostrarID;
+        private System.Windows.Forms.Label label27;
     }
 }
 

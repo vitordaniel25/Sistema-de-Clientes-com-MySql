@@ -34,5 +34,11 @@ namespace SistemasDeClientes
             var c = new gerarPDF();
             c.gerar(dgvBuscar);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var c = new GerarExcel();
+            c.gerarExcel(dgvBuscar);
+        }
     }
 }

@@ -38,12 +38,14 @@ namespace SistemasDeClientes
         {
             pnlConsulta.Visible = false;
             pnlHome.Visible = true;
+           
         }
 
         private void btVoltar_Click(object sender, EventArgs e)
         {
             pnlCadastro.Visible = false;
             pnlHome.Visible = true;
+            limpar();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -77,6 +79,19 @@ namespace SistemasDeClientes
             txbNumero.Text = "";
             txbCEP.Text = "";
             txbUF.Text = "";
+            txbID.Text = "";
+            txbNomeEdit.Text = "";
+            txbEmailEdit.Text = "";
+            txbTelefoneEdit.Text = "";
+            txbDataEdit.Text = "";
+            txbCPFEdit.Text = "";
+            txbRuaEdit.Text = "";
+            txbBairroEdit.Text = "";
+            txbCidadeEdit.Text = "";
+            txbNumeroEdit.Text = "";
+            txbCEPEdit.Text = "";
+            txbUFEdit.Text = "";
+            txbID.Text = "";
         }
 
 
@@ -163,6 +178,103 @@ namespace SistemasDeClientes
         private void dgvBuscar_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btAtualizar_Click(object sender, EventArgs e)
+        {
+            pnlAtualizar.Visible = true;
+            pnlHome.Visible = false;
+        }
+
+        private void btVoltar3_Click(object sender, EventArgs e)
+        {
+            pnlAtualizar.Visible = false;
+            pnlHome.Visible = true; 
+            limpar();
+        }
+
+        private void txbID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btOK_Click(object sender, EventArgs e)
+        {
+            var a = new Atualizar();
+            var client = new cliente();
+            client = a.mostrarCliente(txbID.Text);
+            txbMostrarID.Text = client.ID;
+            txbNomeEdit.Text = client.nome;
+            txbDataEdit.Text = client.data;
+            txbCPFEdit.Text = client.cpf;
+            txbCEPEdit.Text = client.cep;
+            txbNumeroEdit.Text = client.numero;
+            txbEmailEdit.Text = client.email;
+            txbRuaEdit.Text = client.rua;
+            txbUFEdit.Text = client.uf;
+            txbBairroEdit.Text = client.bairro;
+            txbCidadeEdit.Text = client.cidade;
+            txbTelefoneEdit.Text = client.telefone;
+            if (client.nome != "")
+            {
+                camposEnable();
+            }
+            else
+            {
+                MessageBox.Show("ID não encontrado!");
+                
+            }
+        }
+
+        private void btAtualizarCliente_Click(object sender, EventArgs e)
+        {
+            var atualizar = new Atualizar();
+            bool boolLimpar = atualizar.atualizarCliente(txbID.Text, txbNomeEdit.Text, txbEmailEdit.Text, txbTelefoneEdit.Text, txbDataEdit.Text, txbCPFEdit.Text, txbRuaEdit.Text,
+            txbBairroEdit.Text, txbCidadeEdit.Text, txbNumeroEdit.Text, txbCEPEdit.Text, txbUFEdit.Text);
+            if (boolLimpar) { limpar(); camposDisnable(); }
+        }
+        private void camposEnable()
+        {
+            txbNomeEdit.Enabled = true;
+            txbDataEdit.Enabled = true;
+            txbCPFEdit.Enabled = true;
+            txbCEPEdit.Enabled = true;
+            txbNumeroEdit.Enabled = true;
+            txbEmailEdit.Enabled = true;
+            txbRuaEdit.Enabled = true;
+            txbUFEdit.Enabled = true;
+            txbBairroEdit.Enabled = true;
+            txbCidadeEdit.Enabled = true;
+            txbTelefoneEdit.Enabled = true;
+            btExcluir.Enabled = true;
+            btAtualizarCliente.Enabled = true;
+        }
+        private void camposDisnable()
+        {
+            txbNomeEdit.Enabled = false;
+            txbDataEdit.Enabled = false;
+            txbCPFEdit.Enabled = false;
+            txbCEPEdit.Enabled = false;
+            txbNumeroEdit.Enabled = false;
+            txbEmailEdit.Enabled = false;
+            txbRuaEdit.Enabled = false;
+            txbUFEdit.Enabled = false;
+            txbBairroEdit.Enabled = false;
+            txbCidadeEdit.Enabled = false;
+            txbTelefoneEdit.Enabled = false;
+            btExcluir.Enabled = false;
+            btAtualizarCliente.Enabled = false;
+        }
+
+        private void btExcluir_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes == MessageBox.Show("Tem certeza que deseja apagar cliente?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
+            {
+                MessageBox.Show("Registro apagado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var excluir = new Excluir();
+                excluir.excluir(txbID.Text);
+                limpar();
+            }
         }
     }
 }
