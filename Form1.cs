@@ -6,17 +6,20 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
 namespace SistemasDeClientes
 {
     public partial class Form1 : Form
     {
-        string parametro="nome";
+        string parametro = "nome";
+        DataTable resultados;
         public Form1()
         {
             InitializeComponent();
         }
+
 
 
         private void btConsultar_Click(object sender, EventArgs e)
@@ -64,7 +67,7 @@ namespace SistemasDeClientes
         private void limpar()
         {
             txbNome.Text = "";
-            txbEmail.Text = ""; 
+            txbEmail.Text = "";
             txbTelefone.Text = "";
             txbData.Text = "";
             txbCPF.Text = "";
@@ -76,10 +79,44 @@ namespace SistemasDeClientes
             txbUF.Text = "";
         }
 
+
         private void btBuscar_Click(object sender, EventArgs e)
         {
+
             var buscar = new Consultar();
-            dgvBuscar.DataSource = buscar.ConsultarNoBanco(parametro, txbBuscar.Text);
+            switch (parametro)
+            {
+                case "todos":
+                    {
+                        resultados = buscar.consultarTodos();
+                    }
+                    break;
+                case "ID":
+                    {
+                        if (txbBuscar.Text != "")
+                        {
+                            resultados = buscar.consultarID(txbBuscar.Text);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Digite algo!");
+                        }
+                    }
+                    break;
+                case "nome":
+                    {
+                        if (txbBuscar.Text != "")
+                        {
+                            resultados = buscar.consultarNome(txbBuscar.Text);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Digite algo!");
+                        }
+                    }
+                    break;
+            }
+            dgvBuscar.DataSource = resultados;
         }
 
         private void btNome_Click(object sender, EventArgs e)
@@ -113,6 +150,19 @@ namespace SistemasDeClientes
             btID.ForeColor = System.Drawing.Color.DarkGray;
             btID.BackColor = System.Drawing.Color.DimGray;
             parametro = "todos";
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var consultaMax = new ConsultaMax(resultados);
+            consultaMax.Show();
+        }
+
+
+        private void dgvBuscar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

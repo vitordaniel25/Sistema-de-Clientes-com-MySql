@@ -12,8 +12,6 @@ namespace SistemasDeClientes
     {
         MySqlConnection conexao;
         MySqlCommand comando;
-        MySqlDataAdapter dataAdapter;
-        MySqlDataReader dataReader;
         string strSQL;
     
         public bool SalvarNoBanco(string nome,string email, string telefone, string data, string cpf, string rua, 

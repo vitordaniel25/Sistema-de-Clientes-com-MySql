@@ -12,9 +12,27 @@ namespace SistemasDeClientes
 {
     public partial class ConsultaMax : Form
     {
-        public ConsultaMax()
+        DataTable resultados;
+        public ConsultaMax(DataTable Resultados)
         {
             InitializeComponent();
+            resultados = Resultados;
+        }
+
+        private void ConsultaMax_Load(object sender, EventArgs e)
+        {
+            dgvBuscar.DataSource = resultados;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void btgerarPDF_Click(object sender, EventArgs e)
+        {
+            var c = new gerarPDF();
+            c.gerar(dgvBuscar);
         }
     }
 }

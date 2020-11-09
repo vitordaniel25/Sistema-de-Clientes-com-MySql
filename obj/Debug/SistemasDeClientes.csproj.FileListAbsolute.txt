@@ -10,3 +10,7 @@ D:\Estudos\Programação\SistemasDeClientes\SistemasDeClientes\obj\Debug\Sistema
 D:\Estudos\Programação\SistemasDeClientes\SistemasDeClientes\bin\Debug\MySql.Data.dll
 D:\Estudos\Programação\SistemasDeClientes\SistemasDeClientes\bin\Debug\MySql.Data.xml
 D:\Estudos\Programação\SistemasDeClientes\SistemasDeClientes\obj\Debug\SistemasDeClientes.csproj.CopyComplete
+D:\Estudos\Programação\SistemasDeClientes\SistemasDeClientes\obj\Debug\SistemasDeClientes.ConsultaMax.resources
+D:\Estudos\Programação\SistemasDeClientes\SistemasDeClientes\bin\Debug\BouncyCastle.Crypto.dll
+D:\Estudos\Programação\SistemasDeClientes\SistemasDeClientes\bin\Debug\itextsharp.dll
+D:\Estudos\Programação\SistemasDeClientes\SistemasDeClientes\bin\Debug\itextsharp.xml
