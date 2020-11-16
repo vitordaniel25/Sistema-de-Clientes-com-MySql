@@ -21,7 +21,7 @@ namespace SistemasDeClientes
         {
             try
             {
-                conexao = new MySqlConnection("Server=localhost; Database= SISTEMADECLIENTES; Uid=root; Pwd=1234;");
+                conexao = new MySqlConnection(MySqlParametros.Rota);
                 strSQL = "SELECT * FROM CLIENTES WHERE NOME LIKE '" + Valor + "%'";
                 dataAdapter = new MySqlDataAdapter(strSQL, conexao);
                 DataTable dt = new DataTable();

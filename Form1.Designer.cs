@@ -40,6 +40,7 @@
             this.btAtualizar = new System.Windows.Forms.Button();
             this.btNovo = new System.Windows.Forms.Button();
             this.pnlCadastro = new System.Windows.Forms.Panel();
+            this.txbNumero = new System.Windows.Forms.MaskedTextBox();
             this.btVoltar = new System.Windows.Forms.Button();
             this.btCadastrar = new System.Windows.Forms.Button();
             this.txbCEP = new System.Windows.Forms.MaskedTextBox();
@@ -51,7 +52,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txbUF = new System.Windows.Forms.TextBox();
-            this.txbNumero = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txbBairro = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -80,6 +80,8 @@
             this.btOK = new System.Windows.Forms.Button();
             this.btExcluir = new System.Windows.Forms.Button();
             this.btAtualizarCliente = new System.Windows.Forms.Button();
+            this.txbID = new System.Windows.Forms.MaskedTextBox();
+            this.txbNumeroEdit = new System.Windows.Forms.MaskedTextBox();
             this.txbCEPEdit = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txbCPFEdit = new System.Windows.Forms.MaskedTextBox();
@@ -89,9 +91,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.txbUFEdit = new System.Windows.Forms.TextBox();
-            this.txbNumeroEdit = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.txbID = new System.Windows.Forms.TextBox();
             this.txbMostrarID = new System.Windows.Forms.TextBox();
             this.txbBairroEdit = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -162,7 +162,7 @@
             this.btAtualizar.Location = new System.Drawing.Point(229, 488);
             this.btAtualizar.Name = "btAtualizar";
             this.btAtualizar.Size = new System.Drawing.Size(196, 60);
-            this.btAtualizar.TabIndex = 1;
+            this.btAtualizar.TabIndex = 2;
             this.btAtualizar.Text = "Atualizar";
             this.btAtualizar.UseVisualStyleBackColor = false;
             this.btAtualizar.Click += new System.EventHandler(this.btAtualizar_Click);
@@ -176,7 +176,7 @@
             this.btNovo.Location = new System.Drawing.Point(430, 488);
             this.btNovo.Name = "btNovo";
             this.btNovo.Size = new System.Drawing.Size(196, 60);
-            this.btNovo.TabIndex = 1;
+            this.btNovo.TabIndex = 3;
             this.btNovo.Text = "Novo";
             this.btNovo.UseVisualStyleBackColor = false;
             this.btNovo.Click += new System.EventHandler(this.btNovo_Click);
@@ -184,6 +184,7 @@
             // pnlCadastro
             // 
             this.pnlCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
+            this.pnlCadastro.Controls.Add(this.txbNumero);
             this.pnlCadastro.Controls.Add(this.btVoltar);
             this.pnlCadastro.Controls.Add(this.btCadastrar);
             this.pnlCadastro.Controls.Add(this.txbCEP);
@@ -195,7 +196,6 @@
             this.pnlCadastro.Controls.Add(this.label3);
             this.pnlCadastro.Controls.Add(this.label2);
             this.pnlCadastro.Controls.Add(this.txbUF);
-            this.pnlCadastro.Controls.Add(this.txbNumero);
             this.pnlCadastro.Controls.Add(this.label9);
             this.pnlCadastro.Controls.Add(this.txbBairro);
             this.pnlCadastro.Controls.Add(this.label8);
@@ -216,6 +216,19 @@
             this.pnlCadastro.Size = new System.Drawing.Size(657, 560);
             this.pnlCadastro.TabIndex = 1;
             this.pnlCadastro.Visible = false;
+            // 
+            // txbNumero
+            // 
+            this.txbNumero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbNumero.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbNumero.Font = new System.Drawing.Font("Century Gothic", 17F);
+            this.txbNumero.ForeColor = System.Drawing.Color.White;
+            this.txbNumero.Location = new System.Drawing.Point(444, 243);
+            this.txbNumero.Mask = "00000";
+            this.txbNumero.Name = "txbNumero";
+            this.txbNumero.Size = new System.Drawing.Size(103, 35);
+            this.txbNumero.TabIndex = 6;
+            this.txbNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btVoltar
             // 
@@ -288,7 +301,7 @@
             this.txbTelefone.Font = new System.Drawing.Font("Century Gothic", 17F);
             this.txbTelefone.ForeColor = System.Drawing.Color.White;
             this.txbTelefone.Location = new System.Drawing.Point(28, 445);
-            this.txbTelefone.Mask = "(00)0 0000 0000";
+            this.txbTelefone.Mask = "(00)00000 0000";
             this.txbTelefone.Name = "txbTelefone";
             this.txbTelefone.Size = new System.Drawing.Size(196, 35);
             this.txbTelefone.TabIndex = 11;
@@ -347,17 +360,6 @@
             this.txbUF.Name = "txbUF";
             this.txbUF.Size = new System.Drawing.Size(74, 34);
             this.txbUF.TabIndex = 7;
-            // 
-            // txbNumero
-            // 
-            this.txbNumero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.txbNumero.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.txbNumero.ForeColor = System.Drawing.Color.White;
-            this.txbNumero.Location = new System.Drawing.Point(444, 246);
-            this.txbNumero.Name = "txbNumero";
-            this.txbNumero.Size = new System.Drawing.Size(103, 34);
-            this.txbNumero.TabIndex = 6;
             // 
             // label9
             // 
@@ -540,6 +542,8 @@
             // 
             // dgvBuscar
             // 
+            this.dgvBuscar.AllowUserToAddRows = false;
+            this.dgvBuscar.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
@@ -677,6 +681,8 @@
             this.pnlAtualizar.Controls.Add(this.btOK);
             this.pnlAtualizar.Controls.Add(this.btExcluir);
             this.pnlAtualizar.Controls.Add(this.btAtualizarCliente);
+            this.pnlAtualizar.Controls.Add(this.txbID);
+            this.pnlAtualizar.Controls.Add(this.txbNumeroEdit);
             this.pnlAtualizar.Controls.Add(this.txbCEPEdit);
             this.pnlAtualizar.Controls.Add(this.label10);
             this.pnlAtualizar.Controls.Add(this.txbCPFEdit);
@@ -686,9 +692,7 @@
             this.pnlAtualizar.Controls.Add(this.label16);
             this.pnlAtualizar.Controls.Add(this.label17);
             this.pnlAtualizar.Controls.Add(this.txbUFEdit);
-            this.pnlAtualizar.Controls.Add(this.txbNumeroEdit);
             this.pnlAtualizar.Controls.Add(this.label18);
-            this.pnlAtualizar.Controls.Add(this.txbID);
             this.pnlAtualizar.Controls.Add(this.txbMostrarID);
             this.pnlAtualizar.Controls.Add(this.txbBairroEdit);
             this.pnlAtualizar.Controls.Add(this.label26);
@@ -770,6 +774,35 @@
             this.btAtualizarCliente.UseVisualStyleBackColor = false;
             this.btAtualizarCliente.Click += new System.EventHandler(this.btAtualizarCliente_Click);
             // 
+            // txbID
+            // 
+            this.txbID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbID.Font = new System.Drawing.Font("Century Gothic", 17F);
+            this.txbID.ForeColor = System.Drawing.Color.White;
+            this.txbID.Location = new System.Drawing.Point(475, 63);
+            this.txbID.Mask = "00000";
+            this.txbID.Name = "txbID";
+            this.txbID.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txbID.Size = new System.Drawing.Size(88, 35);
+            this.txbID.TabIndex = 1;
+            this.txbID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txbNumeroEdit
+            // 
+            this.txbNumeroEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.txbNumeroEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbNumeroEdit.Enabled = false;
+            this.txbNumeroEdit.Font = new System.Drawing.Font("Century Gothic", 17F);
+            this.txbNumeroEdit.ForeColor = System.Drawing.Color.White;
+            this.txbNumeroEdit.Location = new System.Drawing.Point(444, 246);
+            this.txbNumeroEdit.Mask = "00000";
+            this.txbNumeroEdit.Name = "txbNumeroEdit";
+            this.txbNumeroEdit.Size = new System.Drawing.Size(103, 35);
+            this.txbNumeroEdit.TabIndex = 8;
+            this.txbNumeroEdit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbNumeroEdit.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            // 
             // txbCEPEdit
             // 
             this.txbCEPEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
@@ -816,7 +849,7 @@
             this.txbTelefoneEdit.Font = new System.Drawing.Font("Century Gothic", 17F);
             this.txbTelefoneEdit.ForeColor = System.Drawing.Color.White;
             this.txbTelefoneEdit.Location = new System.Drawing.Point(28, 445);
-            this.txbTelefoneEdit.Mask = "(00)0 0000 0000";
+            this.txbTelefoneEdit.Mask = "(00)00000 0000";
             this.txbTelefoneEdit.Name = "txbTelefoneEdit";
             this.txbTelefoneEdit.Size = new System.Drawing.Size(196, 35);
             this.txbTelefoneEdit.TabIndex = 13;
@@ -878,18 +911,6 @@
             this.txbUFEdit.Size = new System.Drawing.Size(74, 34);
             this.txbUFEdit.TabIndex = 9;
             // 
-            // txbNumeroEdit
-            // 
-            this.txbNumeroEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.txbNumeroEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbNumeroEdit.Enabled = false;
-            this.txbNumeroEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.txbNumeroEdit.ForeColor = System.Drawing.Color.White;
-            this.txbNumeroEdit.Location = new System.Drawing.Point(444, 246);
-            this.txbNumeroEdit.Name = "txbNumeroEdit";
-            this.txbNumeroEdit.Size = new System.Drawing.Size(103, 34);
-            this.txbNumeroEdit.TabIndex = 8;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -899,18 +920,6 @@
             this.label18.Size = new System.Drawing.Size(31, 22);
             this.label18.TabIndex = 0;
             this.label18.Text = "UF";
-            // 
-            // txbID
-            // 
-            this.txbID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.txbID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.txbID.ForeColor = System.Drawing.Color.White;
-            this.txbID.Location = new System.Drawing.Point(331, 63);
-            this.txbID.Name = "txbID";
-            this.txbID.Size = new System.Drawing.Size(232, 34);
-            this.txbID.TabIndex = 1;
-            this.txbID.TextChanged += new System.EventHandler(this.txbID_TextChanged);
             // 
             // txbMostrarID
             // 
@@ -923,6 +932,7 @@
             this.txbMostrarID.Name = "txbMostrarID";
             this.txbMostrarID.Size = new System.Drawing.Size(127, 34);
             this.txbMostrarID.TabIndex = 9;
+            this.txbMostrarID.TabStop = false;
             // 
             // txbBairroEdit
             // 
@@ -940,7 +950,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.label26.Location = new System.Drawing.Point(327, 35);
+            this.label26.Location = new System.Drawing.Point(471, 35);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(103, 22);
             this.label26.TabIndex = 0;
@@ -1080,10 +1090,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(657, 560);
-            this.Controls.Add(this.pnlHome);
-            this.Controls.Add(this.pnlConsulta);
-            this.Controls.Add(this.pnlAtualizar);
             this.Controls.Add(this.pnlCadastro);
+            this.Controls.Add(this.pnlAtualizar);
+            this.Controls.Add(this.pnlConsulta);
+            this.Controls.Add(this.pnlHome);
             this.Font = new System.Drawing.Font("Arial", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1120,7 +1130,6 @@
         private System.Windows.Forms.MaskedTextBox txbData;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txbUF;
-        private System.Windows.Forms.TextBox txbNumero;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txbBairro;
         private System.Windows.Forms.Label label8;
@@ -1160,7 +1169,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txbUFEdit;
-        private System.Windows.Forms.TextBox txbNumeroEdit;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txbBairroEdit;
         private System.Windows.Forms.Label label19;
@@ -1175,11 +1183,13 @@
         private System.Windows.Forms.TextBox txbNomeEdit;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button btOK;
-        private System.Windows.Forms.TextBox txbID;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button btExcluir;
         private System.Windows.Forms.TextBox txbMostrarID;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.MaskedTextBox txbNumeroEdit;
+        private System.Windows.Forms.MaskedTextBox txbNumero;
+        private System.Windows.Forms.MaskedTextBox txbID;
     }
 }
 

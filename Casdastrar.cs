@@ -17,11 +17,15 @@ namespace SistemasDeClientes
         public bool SalvarNoBanco(string nome,string email, string telefone, string data, string cpf, string rua, 
             string bairro, string cidade, string numero, string cep, string uf)
         {
+            if (numero == "")
+            {
+                numero = "0";
+            }
             bool limpar = false;
             
             try
             {
-                conexao = new MySqlConnection("Server=localhost; Database= SISTEMADECLIENTES; Uid=root; Pwd=1234;");
+                conexao = new MySqlConnection(MySqlParametros.Rota);
 
                 strSQL = "INSERT INTO CLIENTES" + " (NOME,EMAIL,TELEFONE, DATA, CPF, CEP, RUA, NUMERO, UF, CIDADE, BAIRRO) VALUES (@NOME,@EMAIL,@TELEFONE, @DATA, @CPF, @CEP, @RUA, @NUMERO, @UF, @CIDADE, @BAIRRO)";
 

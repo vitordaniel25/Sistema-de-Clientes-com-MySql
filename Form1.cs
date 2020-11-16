@@ -38,7 +38,7 @@ namespace SistemasDeClientes
         {
             pnlConsulta.Visible = false;
             pnlHome.Visible = true;
-           
+            txbBuscar.Text = "";
         }
 
         private void btVoltar_Click(object sender, EventArgs e)
@@ -61,10 +61,16 @@ namespace SistemasDeClientes
 
         private void btCadastrar_Click(object sender, EventArgs e)
         {
-            var salvar = new Casdastrar();
-            bool boolLimpar = salvar.SalvarNoBanco(txbNome.Text, txbEmail.Text, txbTelefone.Text, txbData.Text, txbCPF.Text, txbRua.Text,
-            txbBairro.Text, txbCidade.Text, txbNumero.Text, txbCEP.Text, txbUF.Text);
-            if (boolLimpar) { limpar(); }
+            if (txbNome.Text != "") {
+                var salvar = new Casdastrar();
+                bool boolLimpar = salvar.SalvarNoBanco(txbNome.Text, txbEmail.Text, txbTelefone.Text, txbData.Text, txbCPF.Text, txbRua.Text,
+                txbBairro.Text, txbCidade.Text, txbNumero.Text, txbCEP.Text, txbUF.Text);
+                if (boolLimpar) { limpar(); }
+            }
+            else
+            {
+                MessageBox.Show("Digite um nome!");
+            }
         }
         private void limpar()
         {
@@ -92,12 +98,14 @@ namespace SistemasDeClientes
             txbCEPEdit.Text = "";
             txbUFEdit.Text = "";
             txbID.Text = "";
+            txbMostrarID.Text = "";
         }
 
 
         private void btBuscar_Click(object sender, EventArgs e)
         {
-           
+            
+
             var buscar = new Consultar();
             switch (parametro)
             {
@@ -132,6 +140,7 @@ namespace SistemasDeClientes
                     break;
             }
             dgvBuscar.DataSource = resultados;
+            txbBuscar.Text = "";
         }
 
         private void btNome_Click(object sender, EventArgs e)
@@ -143,6 +152,8 @@ namespace SistemasDeClientes
             btTodos.ForeColor = System.Drawing.Color.DarkGray;
             btTodos.BackColor = System.Drawing.Color.DimGray;
             parametro = "nome";
+            txbBuscar.Text = "";
+
         }
 
         private void btID_Click(object sender, EventArgs e)
@@ -154,6 +165,7 @@ namespace SistemasDeClientes
             btTodos.ForeColor = System.Drawing.Color.DarkGray;
             btTodos.BackColor = System.Drawing.Color.DimGray;
             parametro = "ID";
+            txbBuscar.Text = "";
         }
 
         private void btTodos_Click(object sender, EventArgs e)
@@ -165,7 +177,7 @@ namespace SistemasDeClientes
             btID.ForeColor = System.Drawing.Color.DarkGray;
             btID.BackColor = System.Drawing.Color.DimGray;
             parametro = "todos";
-
+            txbBuscar.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -189,7 +201,8 @@ namespace SistemasDeClientes
         private void btVoltar3_Click(object sender, EventArgs e)
         {
             pnlAtualizar.Visible = false;
-            pnlHome.Visible = true; 
+            pnlHome.Visible = true;
+            camposDisnable();
             limpar();
         }
 
@@ -200,6 +213,7 @@ namespace SistemasDeClientes
 
         private void btOK_Click(object sender, EventArgs e)
         {
+            camposDisnable();            
             var a = new Atualizar();
             var client = new cliente();
             client = a.mostrarCliente(txbID.Text);
@@ -214,7 +228,7 @@ namespace SistemasDeClientes
             txbUFEdit.Text = client.uf;
             txbBairroEdit.Text = client.bairro;
             txbCidadeEdit.Text = client.cidade;
-            txbTelefoneEdit.Text = client.telefone;
+            txbTelefoneEdit.Text = client.telefone; 
             if (client.nome != "")
             {
                 camposEnable();
@@ -222,7 +236,8 @@ namespace SistemasDeClientes
             else
             {
                 MessageBox.Show("ID não encontrado!");
-                
+                limpar();
+
             }
         }
 
@@ -275,6 +290,11 @@ namespace SistemasDeClientes
                 excluir.excluir(txbID.Text);
                 limpar();
             }
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

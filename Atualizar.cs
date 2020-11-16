@@ -25,7 +25,7 @@ namespace SistemasDeClientes
             a.nome = "";
             try
             {
-                conexao = new MySqlConnection("Server=localhost; Database=SISTEMADECLIENTES; Uid=root; Pwd=1234;");
+                conexao = new MySqlConnection(MySqlParametros.Rota);
 
                 strSQL = "SELECT * FROM CLIENTES WHERE ID = @ID";
 

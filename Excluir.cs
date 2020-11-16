@@ -17,7 +17,7 @@ namespace SistemasDeClientes
         {
             try
             {
-                conexao = new MySqlConnection("Server=localhost; Database=SISTEMADECLIENTES; Uid=root; Pwd=1234;");
+                conexao = new MySqlConnection(MySqlParametros.Rota);
 
                 strSQL = "DELETE FROM CLIENTES WHERE ID = @ID";
 

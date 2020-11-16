@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaMax));
             this.dgvBuscar = new System.Windows.Forms.DataGridView();
             this.btgerarPDF = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,6 +41,8 @@
             // 
             // dgvBuscar
             // 
+            this.dgvBuscar.AllowUserToAddRows = false;
+            this.dgvBuscar.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 16F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
@@ -53,6 +56,7 @@
             this.dgvBuscar.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.dgvBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvBuscar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 16F);
@@ -133,6 +137,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btgerarPDF);
             this.Controls.Add(this.dgvBuscar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConsultaMax";
             this.Text = "ConsultaMax";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

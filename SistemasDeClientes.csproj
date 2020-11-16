@@ -75,6 +75,7 @@
     </Compile>
     <Compile Include="GerarExcel.cs" />
     <Compile Include="gerarPDF.cs" />
+    <Compile Include="MySqlParametros.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ConsultaMax.resx">
